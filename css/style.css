@@ -72,7 +72,9 @@
     
 }
 
-/* main content section  */
+
+
+/*============== main content section============  */
 .main__container{
     margin-top: 100px;
 }
@@ -233,118 +235,80 @@
 }
 
 /* media quries ---------================= */
-/* Tablet Devices */
-@media only screen and ((max-width: 768px)){
+@media only screen and (max-width: 600px) {
+ 
     .header_container{
-        color: #fff;
-        background: #000;
-        padding: 20px 20px 0 50px;
-        width: 100%;
-        margin-bottom: 0;
+        flex-direction: column;
+        padding: 0px 50px 0 50px;
+        border-radius: 20px;
+        margin-bottom: 10px;
     }
+
+    /* =====header ==== */
     .header__img{
-        flex-basis: 40%;
+        width: 100%;
        
     }
     .text{
-        padding-right: 20px;
-        padding-bottom: 50px;
-        flex-basis:75%;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        text-align: center;
     }
     .text h1{
-        font-size: 2em;
-        line-height: 30px;
+        font-size: 30px;
+        line-height: 40px;
         margin-top: 50px;
     }
     .text p{
         margin-top: 20px;
         margin-bottom: 30px;
         font-size: 14px;
+        height: 40px;
+        width: 100%;
+       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      color: #fff;
+
     }
-    .H_btn{
-        width: 120px;
-        height: 45px;
-        font-size: 12px;
-        animation: btnanimation 2s infinite;
-       
-    }
-    @keyframes btnanimation {
-        from {
-            background: #000;
-            border: 2px solid #dd0000; 
-            transition: 0.5s;
-            letter-spacing: 1px;
-        }
-        
-    }
-    /* main section style  */
+
+    /* =========main content design=========  */
     .main__container{
+        margin-top: 10px;
         flex-direction: column;
-        margin-top: 0px;
+    }
+    .card__wrapping{
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
     .side__nav{
-        flex-direction: row;
-        width: 100%;
-        height: 100px;
-        background: #fff;
+      width: 100%;
+      background: #fff;
+      
     }
     .side__nav a{
-        border: 2px solid #f2f2f2;
-        color: #000;
+        border: 1px solid #f2f2f2;
         border-radius: 5px;
     }
-    /* card section style */
-    .card__wrapping{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-    }
-    .footer{
-        margin-top:0;
-    }
-    .more__btn{
-        display: block;
-    }
    
-}
-
-
-/* responsive design for mobile devices */
-@media only screen and (max-width: 600px) {
-   .header_container{
-    flex-direction: column;
-    text-align: center;
-   }
-   .text{
-    padding-bottom: 20px;
-   }
-   .text p{
-    height: 40px;
-    width: 100%;
-   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: wrap;
-  color: #fff;
-   }
-   .side__nav{
-    flex-direction: column;
-    width: 100%;
-    height: 180px;
-    background: #fff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.card__wrapping{
-    grid-template-columns: repeat(1, 1fr);
-}
-.more__btn{
-    display: none;
-}
-.footer{
-    margin-top:30px;
-}
-.footer__menu{
-    flex-direction: column;
-}
+    .card__body{
+        padding: 20px;
+    }
+    .card__body p{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+    .card_footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .footer__menu{
+        flex-direction: column;
+    }
   }
+
+
+
+
